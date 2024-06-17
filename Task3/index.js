@@ -69,3 +69,23 @@ for(let i=0;i<Evenfruitsitems.length;i++){
   Evenfruitsitems[i].style.backgroundColor='brown';
   Evenfruitsitems[i].style.color='white';
 }
+
+
+// creating Element
+const heading=document.createElement('h3');
+const headingText=document.createTextNode('Buy high quality organic fruits online');
+heading.appendChild(headingText);
+
+const mainHeading=document.getElementsByTagName('div');
+const firstDiv=mainHeading[0];
+firstDiv.appendChild(heading);
+heading.style.fontStyle='italic'
+
+const para=document.createElement('p');
+const paraText=document.createTextNode('Total fruits: 4')
+para.appendChild(paraText)
+
+const secDiv=mainHeading[1];
+const fruits=document.querySelector('.fruits')
+secDiv.insertBefore(para,fruits)
+para.id='fruits-total'
